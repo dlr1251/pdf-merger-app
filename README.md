@@ -1,13 +1,16 @@
-# PDF Merger - Unir Páginas en Una
+# Herramientas PDF - Unir y Comprimir
 
-Una aplicación web simple y funcional construida con Next.js que permite a los usuarios subir un PDF multipágina y unir todas sus páginas en una sola página larga.
+Una aplicación web completa construida con Next.js que permite a los usuarios unir páginas PDF en una sola página larga y comprimir PDFs con diferentes niveles de compresión para reducir su tamaño.
 
 ## Características
 
 - 📄 Sube archivos PDF multipágina
 - 🔗 Une todas las páginas en una sola página vertical larga
+- 🗜️ Comprime PDFs con 5 niveles de compresión (Baja, Media, Alta, Máxima, Extrema)
+- 🚀 Compresión Extrema: Hipermegacompresión que garantiza PDFs siempre menores a 2MB
+- 📊 Vista previa del tamaño resultante antes de comprimir
 - ⬇️ Descarga automática del PDF resultante
-- 🎨 Interfaz moderna y fácil de usar
+- 🎨 Interfaz moderna y fácil de usar con pestañas
 - ⚡ Procesamiento rápido del lado del cliente
 
 ## Tecnologías
@@ -48,10 +51,29 @@ powershell -ExecutionPolicy Bypass -Command "npm install"
 
 ## Uso
 
-1. Haz clic en "Sube un archivo" o arrastra y suelta un PDF
-2. Selecciona un archivo PDF multipágina
-3. Haz clic en "Unir Páginas en Una"
-4. El PDF procesado se descargará automáticamente
+### Unir Páginas PDF
+
+1. Selecciona la pestaña "Unir Páginas"
+2. Haz clic en "Sube un archivo" o arrastra y suelta un PDF
+3. Selecciona un archivo PDF multipágina
+4. Haz clic en "Unir Páginas en Una"
+5. El PDF procesado se descargará automáticamente
+
+### Comprimir PDF
+
+1. Selecciona la pestaña "Comprimir PDF"
+2. Sube un archivo PDF
+3. Elige el nivel de compresión:
+   - **Baja**: Compresión ligera, mejor calidad
+   - **Media**: Balance entre calidad y tamaño
+   - **Alta**: Compresión fuerte, tamaño reducido
+   - **Máxima**: Máxima compresión, menor tamaño
+   - **Extrema**: Hipermegacompresión que garantiza siempre < 2MB (itera automáticamente hasta alcanzar el objetivo)
+4. Ve la estimación del tamaño resultante y el porcentaje de reducción
+5. Haz clic en "Comprimir PDF"
+6. El PDF comprimido se descargará automáticamente
+
+**Nota sobre Compresión Extrema**: Este nivel itera automáticamente reduciendo la escala hasta que el PDF sea menor a 2MB, garantizando el tamaño objetivo.
 
 ## Construcción
 
